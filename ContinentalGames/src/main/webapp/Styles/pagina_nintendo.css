@@ -1,0 +1,401 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/11/2020, 02:21:43 AM
+    Author     : DanielGM
+*/
+
+*{
+    margin: 0;
+    padding:0;
+    }
+    
+    /* comentarios */
+
+    .header{
+        color: white;
+        font-family: 'Bangers', cursive;
+        background-color: darkslategray;
+        
+        height:100px;
+        width:100%;
+        /* no tocar*/
+    }
+    
+    div.image{
+        padding-left: 10px;
+        padding-top: 0px;
+    }
+
+    
+    /* p */
+
+    div.continental h1{
+        height: 100px;
+        padding-left: 10px;
+        padding-top: 20px;
+        font-size: 60px;
+        margin-right: 200px;
+    }
+
+    /* div.buscador{  
+        padding-left: 100px;
+        padding-top: 0px;
+    }
+
+    button.boton{
+        padding-left: 0px;
+        padding-top: 10px;
+    } */
+
+    nav.menu{
+        font-size:25px;
+        word-spacing: 20px;
+        padding-left: 50px;
+        padding-top: 0px;
+    } 
+
+    nav.menu a.btn{
+        background-color: rgba(47,79,79,0);
+        border: 2px solid rgba(0,100,0, 0);
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    nav.menu a.btn:hover{
+        border: 2px solid rgba(0,133,0,1);
+        border-radius: 10px;
+    }
+
+    div.image2{
+        padding-left: 5px;
+        padding-top: 0px;
+        margin-right: 20px;
+    }
+
+    div.dropdown{
+        padding-left: 20px;
+        margin-left: auto;
+    }
+    
+    div.conjunto{
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //// /* OPCIONES EN LA BARRA DE MENU (NAVBAR) ///////////
+    ///////////////////////////////////////////////////////////////////////////*/
+  
+    nav.navbar{ 
+        position: sticky;
+        background-color: darkslategray; 
+        margin-top: 5px;
+        top: 0;
+        z-index: 100;
+    } 
+
+    a.nav-link{
+        font-family: 'Bangers';
+        font-size: 25px;
+        color: white;
+        border-right: 2px solid rgba(0,133,0,0);
+        border-bottom: 2px solid rgba(0,133,0,0);
+    }
+
+    a.nav-link:hover{
+        border-right: 2px solid rgb(0,133,0);
+        border-bottom: 2px solid rgb(0,133,0);
+    }
+
+    li.nav-item{
+        
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    /////////////////////////// INDICE ESPIA /////////////////////////////////// 
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.seccion-noticias-completa{
+        width: 100%;
+        display: inline-flex;
+    }
+
+    div.list-group{
+        margin-top: 40px;
+        margin-left: 40px;
+        min-width: 200px;
+    }
+
+    div.list-group a.list-group-item{
+        background-color: rgba(0, 100, 0, 0.75);
+        border: 5px outset gray;
+        font-size: 15px;
+        font-family: 'Bangers';
+        color: white;
+        text-align: center;
+    }
+
+    div.list-group a.list-group-item:hover{
+        font-size: 20px;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// CONJUNTO DE NOTICIAS NOVEDAD ///////////////////////// 
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.novedad{
+        margin-top:40px;
+        margin-left: 40px;
+        margin-right: 80px;
+        border-right: 10px inset darkgreen;
+        border-bottom: 10px inset darkgreen;
+        border-radius: 10px;
+        font-size: 30px;
+        font-family: 'Bangers';
+        color:white;
+    }
+
+    div.seccion-de-noticias-novedad{
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 80px;
+        margin-bottom: 40px;
+        /* display: flex; */
+        align-items: center;
+    }
+
+    /* NOTICIAS */
+    div.card-novedad{
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background-color: rgba(47,79,79,0.75);
+        color: white;
+        border:10px outset gray;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    /* titulo de la noticia */
+    div.card-novedad div.card-header{
+        font-size: 20px;
+        font-family: 'Bangers';
+        font-style: italic;
+        background-color: darkgreen;
+    }
+
+    /* imagen de la noticia */
+    div.card-novedad img.card-img{
+        display: inline-block;
+        padding: 10px;
+        width: 70%;
+        height: auto;
+    }
+
+    /* resumen de la noticia */
+    div.card-novedad div.card-body{
+        display: inline-block;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 29%;
+    }
+
+    /* tiempo de publicacion */
+    div.card-novedad div.card-footer{
+        display: inline-flex;
+        width: 100%;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: darkgreen;
+    } 
+
+    div.card-novedad div.card-footer div.fecha{
+        margin-left: auto;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// CONJUNTO DE NOTICIAS DEL AÑO ///////////////////////// 
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.este-anno{
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 80px;
+        border-right: 10px inset darkgreen;
+        border-bottom: 10px inset darkgreen;
+        border-radius: 10px;
+        font-size: 30px;
+        font-family: 'Bangers';
+        color:white;
+    }
+
+    div.seccion-de-noticias-anno{
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 80px;
+        align-items: center;
+    }
+
+    /* NOTICIAS */
+    div.card-anno{
+        
+        width: 30%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        background-color: rgba(47,79,79,0.75);
+        color: white;
+        border:10px outset gray;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    /* titulo de la noticia */
+    div.card-anno div.card-header{
+        font-size: 20px;
+        font-family: 'Bangers';
+        font-style: italic;
+        background-color: darkgreen;
+    } 
+
+    div.card-anno div.categoria{
+        color:white;
+        margin-top: 10px;
+        margin-right: 20px;
+        font-style: italic;
+        font-size: small;
+        text-align: right;
+    }
+
+    /* imagen de la noticia */
+    div.card-anno img.card-img{
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* resumen de la noticia */
+    div.card-anno div.card-body{
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    
+
+    /* tiempo de publicacion */
+    div.card-anno div.card-footer{
+        text-align: right;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: darkgreen;
+    } 
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// CONJUNTO DE NOTICIAS MAS ANTIGUAS ///////////////////////// 
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.mas-antiguas{
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 80px;
+        border-right: 10px inset darkgreen;
+        border-bottom: 10px inset darkgreen;
+        border-radius: 10px;
+        font-size: 30px;
+        font-family: 'Bangers';
+        color:white;
+    }
+
+    div.seccion-de-noticias-mas-antiguas{
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 80px;
+    
+        /* align-items: center; */
+        /* display: inline-flexbox; */
+        /* overflow-x: scroll; */
+        /* white-space: nowrap; */
+        /* align-items: stretch; */
+        /* display: flex; */
+        /* flex-direction: row; */
+    }
+
+    /* #horizontal-scroll {
+        display : inline-flex;
+        padding: 1px;
+    } */
+
+    /* NOTICIAS */
+    div.seccion-de-noticias-mas-antiguas div.card-mas-antiguas{
+        border:10px outset gray; 
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        width: 30%;
+
+        background-color: rgba(47,79,79,0.75);
+        color: white;
+        display: inline-block;
+        /* flex-basis: 30%; */
+        /* flex-grow: 0;
+        flex-shrink: 0; */
+    }
+
+    /* titulo de la noticia */
+    div.card-mas-antiguas div.card-header{
+        font-size: 20px;
+        font-family: 'Bangers';
+        font-style: italic;
+        background-color: darkgreen;
+    } 
+
+    div.card-mas-antiguas div.categoria{
+        color:white;
+        margin-top: 10px;
+        margin-right: 20px;
+        font-style: italic;
+        font-size: small;
+        text-align: right;
+    }
+
+    /* imagen de la noticia */
+    div.card-mas-antiguas img.card-img{
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* resumen de la noticia */
+    div.card-mas-antiguas div.card-body{
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* tiempo de publicacion */
+    div.card-mas-antiguas div.card-footer{
+        text-align: right;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: darkgreen;
+    } 
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //////////////FOOTER ///////////////////////// //////////
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    footer.pie-de-pagina{
+        margin-top: 20px;
+        background-color: rgb(73, 73, 73);
+        width: 100%;
+        height: 150px;
+        color:white;
+    }

@@ -1,0 +1,304 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/11/2020, 02:25:39 AM
+    Author     : DanielGM
+*/
+
+*{
+    margin: 0;
+    padding:0;
+    }
+    
+    /* comentarios */
+
+    .header{
+        color: white;
+        font-family: 'Bangers', cursive;
+        background-color: darkslategray;
+        
+        height:100px;
+        width:100%;
+        /* no tocar*/
+    }
+    
+    div.image{
+        padding-left: 10px;
+        padding-top: 0px;
+    }
+
+    
+    /* p */
+
+    div.continental h1{
+        height: 100px;
+        padding-left: 10px;
+        padding-top: 20px;
+        font-size: 60px;
+        margin-right: 200px;
+    }
+
+    /* div.buscador{  
+        padding-left: 100px;
+        padding-top: 0px;
+    }
+
+    button.boton{
+        padding-left: 0px;
+        padding-top: 10px;
+    } */
+
+    nav.menu{
+        font-size:25px;
+        word-spacing: 20px;
+        padding-left: 50px;
+        padding-top: 0px;
+    } 
+
+    nav.menu a.btn{
+        background-color: rgba(47,79,79,0);
+        border: 2px solid rgba(0,100,0, 0);
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    nav.menu a.btn:hover{
+        border: 2px solid rgba(0,133,0,1);
+        border-radius: 10px;
+    }
+
+    div.image2{
+        padding-left: 5px;
+        padding-top: 0px;
+        margin-right: 20px;
+    }
+
+    div.dropdown{
+        padding-left: 20px;
+        margin-left: auto;
+    }
+
+    div.conjunto{
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //// /* OPCIONES EN LA BARRA DE MENU (NAVBAR) ///////////
+    ///////////////////////////////////////////////////////////////////////////*/
+  
+    nav.navbar{ 
+        position: sticky;
+        background-color: darkslategray; 
+        margin-top: 5px;
+        top: 0;
+        z-index: 100;
+    } 
+
+    a.nav-link{
+        font-family: 'Bangers';
+        font-size: 25px;
+        color: white;
+        border-right: 2px solid rgba(0,133,0,0);
+        border-bottom: 2px solid rgba(0,133,0,0);
+    }
+
+    a.nav-link:hover{
+        border-right: 2px solid rgb(0,133,0);
+        border-bottom: 2px solid rgb(0,133,0);
+    }
+
+    li.nav-item{
+        
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
+    div.info{
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 80px;
+        font-family: 'Bangers';
+        text-align: center;
+        color:white;
+    }
+
+    div.image3{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%; 
+        align-items: center;
+    }
+
+    div.image3 img{
+        width: 300px;
+        margin-left: 530px;
+       
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// PERFIL/////////////////////// ///////////////////////// 
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.card-perfil{
+        width: 70%;
+        height: 1100px;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        background-color: rgba(47,79,79,0.75);
+        color: white;
+        border:10px outset gray;
+        border-radius: 10px;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //// /* DISEÑO DE FORMULARIO //////////////////////////
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    form.perfil{
+        margin-top: 40px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    form.perfil div.form-group{
+        color: white;
+        font-size: 20px;
+    }
+
+    form.perfil div.form-group label{
+        margin-left: 100px;
+        width: 100px;
+        height: 40px;
+        text-align: right;
+        
+    }
+
+    form.perfil div.form-group input{
+        margin: 10px;
+        padding: 10px;
+        width: 600px; 
+        
+    }
+
+    form.perfil .hide{
+        display: none;
+    }
+    
+
+   
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //// /* NOTICIAS GUARDADAS //////////////////////////
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.noticias-guardadas-texto{
+        margin-left: 100px;
+        color: white;
+        font-size: 20px;
+    }
+
+    div.seccion-de-noticias-guardadas{
+        margin-top: 20px;
+        display: inline-block;
+        width: 90%;
+        max-height: 500px;
+        align-items: center;
+        margin-left: 5%;
+        border-top: 2px solid gray;
+        border-left: 2px solid gray;
+        border-bottom: 2px solid gray;
+        border-radius: 15px;
+        overflow-y: scroll;
+    }
+
+    /* NOTICIAS */
+    div.card-noticias-guardadas{
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 5%;
+        width: 40%;
+        background-color: rgba(47,79,79,0.75);
+        color: white;
+        border:10px outset gray;
+        border-radius: 10px;
+    }
+
+    /* titulo de la noticia */
+    div.card-noticias-guardadas div.card-header{
+        font-size: 20px;
+        font-family: 'Bangers';
+        font-style: italic;
+        background-color: darkgreen;
+    }
+
+    /* imagen de la noticia */
+    div.card-noticias-guardadas img.card-img{
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* resumen de la noticia */
+    div.card-noticias-guardadas div.card-body{
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* tiempo de publicacion */
+    div.card-noticias-guardadas div.card-footer{
+        display: inline-flex;
+        width: 100%;
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: darkgreen;
+    } 
+
+    div.card-noticias-guardadas div.card-footer div.fecha{
+        margin-left: auto;
+    }
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //// /* BOTONES //////////////////////////
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    div.card-perfil div.card-body{
+        width: 100%;
+        height: auto;
+    }
+
+     div.card-perfil a.btn1{
+         display: inline;
+         margin-left: 80%;
+         padding: 10px;
+         border-radius: 5px;
+    }
+    
+    div.card-perfil a.btn2{
+        margin-left: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* //////////////////////////////////////////////////////////////////////
+    //////////////// //////////////FOOTER ///////////////////////// //////////
+    ///////////////////////////////////////////////////////////////////////////*/
+
+    footer.pie-de-pagina{
+        margin-top: 40px;
+        background-color: rgb(73, 73, 73);
+        width: 100%;
+        height: 150px;
+        color:white;
+    }
