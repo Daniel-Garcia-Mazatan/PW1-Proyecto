@@ -81,6 +81,22 @@ and open the template in the editor.
         margin-left: auto;
     }
     
+    div.dropdown a.dropdown-item#perfil{
+        display: none;
+    }
+
+    div.dropdown a.dropdown-item#cerrar{
+        display: none;
+    }
+
+    div.dropdown a.dropdown-item#agregar{
+        display: none;
+    }
+
+    div.dropdown a.dropdown-item#evaluar{
+        display: none;
+    }
+    
     div.conjunto{
         display: flex;
         align-items: center;

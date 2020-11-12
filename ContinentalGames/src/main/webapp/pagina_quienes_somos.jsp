@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continental Games</title>
     <link rel="stylesheet" href="Styles/pagina_ayuda.css">
-    <script src="js/pagina_principal.js"></script>
+    <script src="javascript/sesion_perfil.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -61,15 +61,16 @@
         <div class="dropdown">
           <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" 
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Usuario
+            Anónimo
           </button>
           
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="pagina_perfil.jsp">Mi perfil</a>
-            <a class="dropdown-item" href="#">Cerrar sesion</a>
-            <a class="dropdown-item" href="pagina_agregar_noticia.jsp">Agregar noticia</a>
-            <a class="dropdown-item" href="pagina_evaluar_noticia.jsp">Evaluar noticias</a>
-            <a class="dropdown-item" href="pagina_ayuda.jsp">Ayuda</a>
+          <div class="dropdown-menu" id="dropdown-menu-1" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="iniciar" onclick="iniciar_sesion()" href="#">Iniciar sesion</a>
+            <a class="dropdown-item" id="perfil" href="pagina_perfil.jsp">Mi perfil</a>
+            <a class="dropdown-item" id="agregar" href="pagina_agregar_noticia.jsp">Agregar noticia</a>
+            <a class="dropdown-item" id="evaluar" href="pagina_evaluar_noticia.jsp">Evaluar noticias</a>
+            <a class="dropdown-item" id="cerrar" onclick="cerrar_sesion()" href="#">Cerrar sesion</a>
+            <a class="dropdown-item" id="ayuda" href="pagina_ayuda.jsp">Ayuda</a>
           </div>
         </div> 
         
