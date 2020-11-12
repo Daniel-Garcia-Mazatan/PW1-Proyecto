@@ -9,6 +9,7 @@ import com.mycompany.continentalgames.models.User;
 import com.mycompany.continentalgames.utls.DbConnection;
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -16,7 +17,7 @@ import java.sql.SQLException;
  * @author DanielGM
  */
 public class UserDAO {
-    public static void insertUser(User user){
+    public static User insertUser(User user){
         try{
             Connection con = DbConnection.getConnection();
             String sql = "call insertUser(?,?)";
@@ -24,7 +25,15 @@ public class UserDAO {
             statement.setString(1,user.getName());
             statement.setString(2,user.getEmail());
             statement.setString(3,user.getPassword());
-            statement.executeUpdate();
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                int id = resultSet.getInt("id_usuario");
+                String username = resultSet.getString("username");
+                String correo = resultSet.getString("correo");
+                String password = resultSet.getString("contraseña");
+                return new User(username, correo, password, id);
+            }
+            con.close();
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
         }

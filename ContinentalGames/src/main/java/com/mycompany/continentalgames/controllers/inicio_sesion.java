@@ -6,6 +6,7 @@
 package com.mycompany.continentalgames.controllers;
 
 
+import com.mycompany.continentalgames.dao.UserDAO;
 import com.mycompany.continentalgames.models.User;
 
 import java.io.IOException;
@@ -38,6 +39,8 @@ public class inicio_sesion extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         User user = new User(name,email,password);
+        User result = UserDAO.insertUser(user);
+        
         response.sendRedirect("login.jsp");
     }
 
