@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,6 +33,17 @@ public class inicio_sesion extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.sendRedirect("login.jsp");
+    }
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -39,9 +51,23 @@ public class inicio_sesion extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         User user = new User(name,email,password);
-        User result = UserDAO.insertUser(user);
+        //UserDAO.insertUser(user);
+        //if(result != null){
+//            HttpSession session = request.getSession();
+//            session.setAttribute(("name"),result.getName());
+//            session.setAttribute(("email"),result.getEmail());
+//            session.setAttribute(("password"),result.getPassword());
+//            request.getRequestDispatcher("pagina_perfil.jsp").forward(request,response);
+//        }
+        if(UserDAO.insertUser(user) == 1){
+            response.sendRedirect("login.jsp");
+        }
+        else{
+            
+        }
         
-        response.sendRedirect("login.jsp");
+   
+        
     }
 
     /**

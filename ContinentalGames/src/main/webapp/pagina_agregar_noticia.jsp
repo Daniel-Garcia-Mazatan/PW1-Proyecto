@@ -144,9 +144,26 @@
         <div class="form-group">
           <label for="categoria" class="categoria" >Categoria: </label>
           <div class="categories">
+              
+            
+            <div class="dropdown2">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Categorias
+            </button>
+          
+            <div class="dropdown-menu" id="dropdown-menu-1" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="Nintendo">Nintendo</a>
+            <a class="dropdown-item" id="Playstation">PlayStation</a>
+            <a class="dropdown-item" id="Xbox">X Box</a>
+            <a class="dropdown-item" id="e3">E3</a>
+            </div>
+            </div>
+              
+              
             <div class="categorias">
-              <input type="checkbox" name="conferencias" id="conferencias" value="conferencias" />
-              <label for="conferencias" class="conferencias" >conferencias</label>
+              <input type="checkbox" name="NINTENDO" id="NINTENDO" value="NINTENDO" />
+              <label for="NINTENDO" class="NINTENDO" >NINTENDO</label>
             </div>
             <div class="categorias">
               <input type="checkbox" name="lanzamientos" id="lanzamientos" value="lanzamientos" />

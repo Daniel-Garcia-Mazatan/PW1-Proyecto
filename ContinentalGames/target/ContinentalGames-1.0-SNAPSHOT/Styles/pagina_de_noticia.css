@@ -252,6 +252,12 @@ and open the template in the editor.
         margin-right: auto;
         overflow-y: scroll;
     } 
+    
+    div.sec-comentarios label.comentarios{
+        margin-left: 30px;
+        font-size: 20px;
+        font-family: 'Bangers';
+    }
 
     div.seccion-todos-los-comentarios label.comentarios{
         margin-left: 10px;
@@ -317,6 +323,69 @@ and open the template in the editor.
 
     div.card-comentarios div.card-footer label.fecha-hora{
         margin-left: 250px;
+    }
+    
+    div.respuestas-comentarios label.respuestas{
+       font-family: 'Bangers';
+       font-size: 20px;
+       margin-left: 50px;
+       margin-top: 10px
+    }
+
+    div.card-comentarios-comentarios{
+        margin-left:50px;
+        border: 10px outset gray;
+        border-radius: 10px;
+    }
+    
+    /* titulo de la noticia */
+    div.card-comentarios-comentarios div.card-header{
+        font-size: 20px;
+        font-family: 'Bangers';
+        font-style: italic;
+        background-color: darkgreen;
+    } 
+
+    /* resumen de la noticia */
+    div.card-comentarios-comentarios div.card-body{
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* tiempo de publicacion */
+    div.card-comentarios-comentarios div.card-footer{
+        font-size: 15px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: darkgreen;
+    } 
+
+    div.card-comentarios-comentarios div.card-footer svg{
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    div.card-comentarios-comentarios div.card-footer svg.bilike:hover{
+        fill: blue;
+    }
+
+    div.card-comentarios-comentarios div.card-footer svg.bidislike:hover{
+        fill: red;
+    }
+
+    div.card-comentarios-comentarios div.card-footer input{
+        width: 100px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 5px;
+    }
+
+    div.card-comentarios-comentarios div.card-footer a{ 
+         margin-left: 10px; 
+    } 
+
+    div.card-comentarios-comentarios div.card-footer label.fecha-hora{
+        margin-left: 190px;
     }
 
     /* //////////////////////////////////////////////////////////////////////

@@ -6,9 +6,19 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%
+    String tipo_us = "anonimo";
+    if(session.getAttribute("tipo_us") != null){
+        tipo_us = (String)session.getAttribute("tipo_us");
+    }
+    
+%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continental Games</title>
@@ -62,7 +72,7 @@
             
             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" 
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Anónimo
+               <%=tipo_us%>
             </button>
 
             <div class="dropdown-menu" id="dropdown-menu-1" aria-labelledby="dropdownMenuButton">
@@ -73,8 +83,9 @@
                 <a class="dropdown-item" id="cerrar" onclick="cerrar_sesion()" href="#">Cerrar sesion</a>
                 <a class="dropdown-item" id="ayuda" href="pagina_ayuda.jsp">Ayuda</a>
             </div>
+            
         </div> 
-        
+            
         <div class = "image2">
           <img src="Usuario.png" alt="usuario" style="width:55px;height:45px;">
         </div> 

@@ -15,6 +15,11 @@ public class User {
     private String email;
     private String password;
     private int id;
+    private String redes;
+    private String imagen;
+    private String tipo_us;
+    private String descripcion;
+    private boolean activo;
 
     public User() {
     }
@@ -36,6 +41,23 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(String name, String email, String password, int id, String redes, String imagen, String tipo_us, String descripcion, boolean activo) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.id = id;
+        this.redes = redes;
+        this.imagen = imagen;
+        this.tipo_us = tipo_us;
+        this.descripcion = descripcion;
+        this.activo = activo;
     }
 
     
@@ -72,6 +94,46 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getRedes() {
+        return redes;
+    }
+
+    public void setRedes(String redes) {
+        this.redes = redes;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public String getTipo_us() {
+        return tipo_us;
+    }
+
+    public void setTipo_us(String tipo_us) {
+        this.tipo_us = tipo_us;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
 
     

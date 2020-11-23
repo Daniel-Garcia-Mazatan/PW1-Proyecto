@@ -5,12 +5,12 @@
  */
 
 
-var sesion_iniciada = 1;
-var tipo_usuario = "registrado";
+//var sesion_iniciada = 1;
+//var tipo_usuario = "administrador";
 
 function iniciar_sesion(){
-    if(sesion_iniciada === 1){
-        if(tipo_usuario === "administrador"){
+    if(sesion_iniciada === true){
+        if(tipo_us === "administrador"){
             let iniciar = document.getElementById("iniciar");
             let perfil = document.getElementById("perfil");
             let agregar = document.getElementById("agregar");
@@ -23,7 +23,7 @@ function iniciar_sesion(){
             evaluar.style.display = "block";
             cerrar.style.display = "block";
         }
-        else if(tipo_usuario === "registrado"){
+        else if(tipo_us === "registrado"){
             let iniciar = document.getElementById("iniciar");
             let perfil = document.getElementById("perfil");
             let cerrar = document.getElementById("cerrar");
@@ -32,7 +32,7 @@ function iniciar_sesion(){
             perfil.style.display = "block";
             cerrar.style.display = "block";
         }
-        else if(tipo_usuario === "moderador"){
+        else if(tipo_us === "moderador"){
             let iniciar = document.getElementById("iniciar");
             let perfil = document.getElementById("perfil");
             let cerrar = document.getElementById("cerrar");
@@ -41,7 +41,7 @@ function iniciar_sesion(){
             perfil.style.display = "block";
             cerrar.style.display = "block";
         }
-        else if(tipo_usuario === "creador"){
+        else if(tipo_us === "creador"){
             let iniciar = document.getElementById("iniciar");
             let perfil = document.getElementById("perfil");
             let agregar = document.getElementById("agregar");
@@ -54,7 +54,7 @@ function iniciar_sesion(){
             evaluar.style.display = "block";
             cerrar.style.display = "block";
         }
-        else if(tipo_usuario === "editor"){
+        else if(tipo_us === "editor"){
             let iniciar = document.getElementById("iniciar");
             let perfil = document.getElementById("perfil");
             let agregar = document.getElementById("agregar");
@@ -69,7 +69,8 @@ function iniciar_sesion(){
         }
         else{}
     }
-    else{}
+    else{
+    }
 }
 
 function cerrar_sesion(){
@@ -87,5 +88,6 @@ function cerrar_sesion(){
     cerrar.style.display = "none";
 
     sesion_iniciada = 0;
-    tipo_usuario = "anonimo";
+    tipo_us = "anonimo";
+    
 }

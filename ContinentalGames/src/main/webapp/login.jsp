@@ -22,7 +22,7 @@
 <div class="form-container sign-up-container">
 
 
-     <form action="inicio_sesion" method="POST">
+     <form action="inicio_sesion" method="POST" class="col-6">
 
        <h1>Crea una cuenta</h1>
       <div class="social-container">
@@ -44,11 +44,12 @@
       </form>
    </div>
    <div class="form-container sign-in-container">
-   <form action="#">
+       
+   <form action="registro_sesion" method="POST" class="col-6">
    <h1>Inicia sesion</h1>
    <div class="social-container">
    
-    <a href="#"  class="social"><i class="fab 
+    <a href="#"  class="social" ><i class="fab 
       fa-facebook-f"></i></a>
       <a href="#"  class="social"><i class="fab 
         fa-google-plus-g"></i></a>
@@ -57,8 +58,8 @@
    </div>
 <span>O usa tu cuenta</span>
 
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
 <a href="#">¿Olvidaste tu contraseña?</a>
 <button>Sign In</button>
    </form>

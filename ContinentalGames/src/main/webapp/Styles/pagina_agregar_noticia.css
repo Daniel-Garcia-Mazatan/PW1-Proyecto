@@ -190,6 +190,23 @@ and open the template in the editor.
         margin-left: 10px;
         margin-right: 10px;
     }
+    
+    form.agregar-noticia div.form-group div.dropdown2{
+        width: 601px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    form.agregar-noticia div.form-group button.btn{
+        width: 600px;
+        height: 50px;
+    }
+
+    form.agregar-noticia div.form-group a.dropdown-item{
+        width: 600px;
+        height: 40px;
+    }
 
     form.agregar-noticia div.form-group div.categorias label{
         margin-left: 10px;
