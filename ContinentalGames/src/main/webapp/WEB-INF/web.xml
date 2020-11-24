@@ -11,6 +11,6 @@
     </session-config>
     
     <welcome-file-list>
-        <welcome-file>registro_sesion</welcome-file>
+        <welcome-file>pagina_agregar_noticia.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

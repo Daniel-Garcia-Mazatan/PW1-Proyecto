@@ -115,6 +115,11 @@ letter-spacing: 1px;
 text-transform: uppercase;
 transition: transform 80ms ease-in;
 }
+
+div.btnanonimo{
+    margin-top: 10px;
+}
+
 button:active{
     transform: scale(.95);
 }

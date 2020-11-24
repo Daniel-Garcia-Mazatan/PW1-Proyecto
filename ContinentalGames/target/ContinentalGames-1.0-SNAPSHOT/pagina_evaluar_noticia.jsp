@@ -5,6 +5,16 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    String tipo_us = "anonimo";
+    boolean sesion_iniciada = false;
+    if(session.getAttribute("tipo_us") != null){
+        tipo_us = (String)session.getAttribute("tipo_us");
+        sesion_iniciada = true;
+    };
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

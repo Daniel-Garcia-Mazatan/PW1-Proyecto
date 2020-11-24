@@ -81,19 +81,19 @@ and open the template in the editor.
         margin-left: auto;
     }
     
-    div.dropdown a.dropdown-item#perfil{
+    div.dropdown button.dropdown-item#perfil{
         display: none;
     }
 
-    div.dropdown a.dropdown-item#cerrar{
+    div.dropdown button.dropdown-item#cerrar{
         display: none;
     }
 
-    div.dropdown a.dropdown-item#agregar{
+    div.dropdown button.dropdown-item#agregar{
         display: none;
     }
 
-    div.dropdown a.dropdown-item#evaluar{
+    div.dropdown button.dropdown-item#evaluar{
         display: none;
     }
     

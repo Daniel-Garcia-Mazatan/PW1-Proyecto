@@ -48,6 +48,7 @@ public class UserDAO {
             statement.setString(1,user.getEmail());
             statement.setString(2,user.getPassword());
             ResultSet resultSet = statement.executeQuery();
+            
             if(resultSet.next()){
                 int id = resultSet.getInt("id_usuario");
                 String correo = resultSet.getString("correo");
@@ -68,5 +69,6 @@ public class UserDAO {
         catch(SQLException ex){
             System.out.println(ex.getMessage());
         }  
+        return null;
     }
 }

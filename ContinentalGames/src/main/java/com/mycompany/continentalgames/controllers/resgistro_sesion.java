@@ -55,10 +55,9 @@ public class resgistro_sesion extends HttpServlet {
         User result = UserDAO.buscaUsuario(user);
         if(result != null){
             HttpSession session = request.getSession();
-            boolean sesion_iniciada = true;
             //session.setAttribute("email",email);
             //session.setAttribute("password",password);
-            session.setAttribute("sesion_iniciada", sesion_iniciada);
+            
             session.setAttribute("id",result.getId());
             session.setAttribute("email",result.getEmail());
             session.setAttribute("name",result.getName());
@@ -74,9 +73,10 @@ public class resgistro_sesion extends HttpServlet {
             //String pass1 = (String)session.getAttribute("password");
             request.getRequestDispatcher("pagina_principal.jsp").forward(request,response);
         }
-        else{
-            response.sendRedirect("login.jsp");
-        }
+        else if(result == null){
+          response.sendRedirect("login.jsp");
+       }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -8,10 +8,11 @@
 
 <%
     String tipo_us = "anonimo";
+    boolean sesion_iniciada = false;
     if(session.getAttribute("tipo_us") != null){
         tipo_us = (String)session.getAttribute("tipo_us");
-    }
-    
+        sesion_iniciada = true;
+    };
 %>
     
 <!DOCTYPE html>
@@ -23,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continental Games</title>
     <link rel="stylesheet" href="Styles/pagina_principal.css">
-    <script src="javascript/sesion_perfil.js"></script>
+    
 
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -76,15 +77,100 @@
             </button>
 
             <div class="dropdown-menu" id="dropdown-menu-1" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" id="iniciar" onclick="iniciar_sesion()" href="#">Iniciar sesion</a>
-                <a class="dropdown-item" id="perfil" href="pagina_perfil.jsp">Mi perfil</a>
-                <a class="dropdown-item" id="agregar" href="pagina_agregar_noticia.jsp">Agregar noticia</a>
-                <a class="dropdown-item" id="evaluar" href="pagina_evaluar_noticia.jsp">Evaluar noticias</a>
-                <a class="dropdown-item" id="cerrar" onclick="cerrar_sesion()" href="#">Cerrar sesion</a>
-                <a class="dropdown-item" id="ayuda" href="pagina_ayuda.jsp">Ayuda</a>
+               
+                    <a class="dropdown-item" id="iniciar" href="login.jsp">Iniciar sesion</a>
+                
+                
+                    <a class="dropdown-item" id="perfil" href="pagina_perfil.jsp">Mi perfil</a>
+                
+                
+                    <a class="dropdown-item" id="agregar" href="pagina_agregar_noticia.jsp">Agregar noticia</a>
+                
+                
+                    <a class="dropdown-item" id="evaluar" href="pagina_evaluar_noticia.jsp">Evaluar noticia</a>
+                
+                <form action="log_of"  method="POST" >
+                    <button class="dropdown-item" id="cerrar" >Cerrar sesion</button>
+                </form>
+                
+                    <a class="dropdown-item" id="ayuda" href="pagina_ayuda.jsp">Ayuda</a>
+                
+                
             </div>
             
         </div> 
+            
+        <script type="text/javascript">
+            
+            let tipo_us = "administrador";
+            let sesion_iniciada = true;
+            //let tipo_us = <%=tipo_us%>;
+            //let sesion_iniciada = <%=sesion_iniciada%>;
+            
+            if(sesion_iniciada === true){
+                if(tipo_us === "administrador"){
+                    let iniciar = document.getElementById("iniciar");
+                    let perfil = document.getElementById("perfil");
+                    let agregar = document.getElementById("agregar");
+                    let evaluar = document.getElementById("evaluar");
+                    let cerrar = document.getElementById("cerrar");
+
+                    iniciar.style.display = "none";
+                    perfil.style.display = "block";
+                    agregar.style.display = "block";
+                    evaluar.style.display = "block";
+                    cerrar.style.display = "block";
+                   
+                }
+                else if(tipo_us === "registrado"){
+                    let iniciar = document.getElementById("iniciar");
+                    let perfil = document.getElementById("perfil");
+                    let cerrar = document.getElementById("cerrar");
+
+                    iniciar.style.display = "none";
+                    perfil.style.display = "block";
+                    cerrar.style.display = "block";
+                }
+                else if(tipo_us === "moderador"){
+                    let iniciar = document.getElementById("iniciar");
+                    let perfil = document.getElementById("perfil");
+                    let cerrar = document.getElementById("cerrar");
+
+                    iniciar.style.display = "none";
+                    perfil.style.display = "block";
+                    cerrar.style.display = "block";
+                }
+                else if(tipo_us === "creador"){
+                    let iniciar = document.getElementById("iniciar");
+                    let perfil = document.getElementById("perfil");
+                    let agregar = document.getElementById("agregar");
+                    let evaluar = document.getElementById("evaluar");
+                    let cerrar = document.getElementById("cerrar");
+
+                    iniciar.style.display = "none";
+                    perfil.style.display = "block";
+                    agregar.style.display = "block";
+                    evaluar.style.display = "block";
+                    cerrar.style.display = "block";
+                }
+                else if(tipo_us === "editor"){
+                    let iniciar = document.getElementById("iniciar");
+                    let perfil = document.getElementById("perfil");
+                    let agregar = document.getElementById("agregar");
+                    let evaluar = document.getElementById("evaluar");
+                    let cerrar = document.getElementById("cerrar");
+
+                    iniciar.style.display = "none";
+                    perfil.style.display = "block";
+                    agregar.style.display = "block";
+                    evaluar.style.display = "block";
+                    cerrar.style.display = "block";
+                }
+                else{}
+            }
+            else{}
+                
+        </script>
             
         <div class = "image2">
           <img src="Usuario.png" alt="usuario" style="width:55px;height:45px;">

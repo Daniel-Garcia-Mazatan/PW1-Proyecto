@@ -5,6 +5,16 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    String tipo_us = "anonimo";
+    boolean sesion_iniciada = false;
+    if(session.getAttribute("tipo_us") != null){
+        tipo_us = (String)session.getAttribute("tipo_us");
+        sesion_iniciada = true;
+    };
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,28 +171,9 @@
             </div>
               
               
-            <div class="categorias">
-              <input type="checkbox" name="NINTENDO" id="NINTENDO" value="NINTENDO" />
-              <label for="NINTENDO" class="NINTENDO" >NINTENDO</label>
-            </div>
-            <div class="categorias">
-              <input type="checkbox" name="lanzamientos" id="lanzamientos" value="lanzamientos" />
-              <label for="lanzamientos" class="lanzamientos" >lanzamientos</label>
-            </div>
-            <div class="categorias">
-              <input type="checkbox" name="consolas" id="consolas" value="consolas" />
-              <label for="consolas" class="consolas" >consolas</label>
-            </div>
-            <div class="categorias">
-              <input type="checkbox" name="accesorios" id="accesorios" value="accesorios" />
-              <label for="accesorios" class="accesorios" >accesorios</label>
-            </div>
-            <div class="categorias">
-              <input type="checkbox" name="comerciales" id="comerciales" value="comerciales" />
-              <label for="comerciales" class="comerciales" >comerciales</label>
-            </div>
+            
           </div>
-      </div>
+        </div>
         <div class="form-group">
           <label for="imagen" >Imagenes: </label>
           <div class="image-group">
